@@ -7,22 +7,70 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
+  min-height: 100vh;
+  margin: 0;
+
+  /* Bakgrund */
+  background-color: #f0f0f0; /* fallback-färg */
+  background-image: url("/background.png"); /* korrekt sökväg till filen */
+  background-repeat: no-repeat; /* Upprepar inte bilden */
+  background-size: cover; /* Fyller hela skärmen */
+  background-position: center; /* Centrerar bilden */
 }
 
+.game {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.449);
+}
+
+/*
+
+.animatedBackground {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(210deg, deepskyblue, #df8dcc, #e8edb4, #7ee38b);
+  background-size: 240% 240%;
+  animation: gradient-animation 6s ease infinite;
+  width: 330px;
+  height: 330px;
+  border-radius: 10px;
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+*/
 .board {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-  width: 300px;
-  height: 300px;
+  flex-direction: column;
+  background-color: #f1d4ea;
+  border-radius: 10px;
+  width: 310px;
+  height: 310px;
 }
 
 .board-row {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .square {
@@ -31,20 +79,21 @@ body {
   align-items: center;
   width: 100px;
   height: 100px;
-  border: 1px solid pink;
-  background-color: rgb(91, 15, 91);
+  margin: 1px;
+
+  background-color: rgb(247, 172, 247);
   font-size: 2rem;
   cursor: pointer;
 }
 
-h1 {
-  color: purple;
+h1,
+h2 {
+  color: rgb(81, 141, 237);
+  font-family: Arial, sans-serif;
 }
 
 .statusMessage {
   margin: 2rem 0;
-  font-family: Arial, sans-serif;
-  color: purple;
 }
 
 .restart {
