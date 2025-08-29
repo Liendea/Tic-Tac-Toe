@@ -26,8 +26,6 @@ function App() {
 
   // Ta reda på vinanren
   function calculateWinner(newSquares: (string | null)[]) {
-    console.log(newSquares);
-
     const lines: number[][] = [
       [0, 1, 2], // rad 1
       [3, 4, 5], // rad 2
